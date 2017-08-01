@@ -1,3 +1,58 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+h1 {
+  margin-bottom: 3%;
+}
+
+.container-fluid {
+  background-color: #16BAC5;
+}
+.home {
+  padding: 150px 30px;
+  background-color: #16BAC5;
+}
+.home h1 {
+  margin-bottom: 50px;
+  color: #353535;
+}
+.row {
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.article {
+  padding-bottom: 5px;
+  border-radius: 5px;
+  margin: 1%;
+  background-color: rgb(230,230,230);
+}
+.article a {
+  color: #353535;
+  text-decoration: none;
+}
+.navbar {
+  margin-bottom: 0 !important;
+}
+.form-control {
+  margin-bottom: 20px;
+}
+
+.button-form {
+  text-align: center;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}

@@ -1,9 +1,16 @@
-<%= form_for(@article) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<div class="form-group">
+  <%= form_for(@article) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
 
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-
-  <%= f.submit %>
-<% end %>
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control form-article', rows: '5' %>
+    <div class="button-form">
+    <% if @article.id.nil? %>
+      <%= f.submit "Create article", class: 'btn btn-primary' %>
+    <% else %>
+      <%= f.submit "Update article", class: 'btn btn-primary' %>
+    <% end %>
+    </div>
+  <% end %>
+</div>

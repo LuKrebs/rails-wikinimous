@@ -1,7 +1,12 @@
-<h1>Articules</h1>
-<% @articles.each do |article| %>
-  <ul>
-    <li><%= link_to article.title, article_path(article) %></li>
-  </ul>
-<% end  %>
-<p><%= link_to "New article", new_article_path %></p>
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <% @articles.each do |article| %>
+      <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 text-center article">
+        <h3><%= link_to article.title, article_path(article) %></h3>
+        <p><%= article.content %></p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

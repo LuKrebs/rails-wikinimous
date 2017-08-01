@@ -16,6 +16,12 @@ class ArticlesController < ApplicationController
     redirect_to article_path(@article)
   end
 
+  def update
+    @article.update(article_params)
+
+    redirect_to article_path(@article)
+  end
+
   def destroy
     @article.destroy
 

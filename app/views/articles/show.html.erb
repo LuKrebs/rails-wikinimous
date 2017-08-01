@@ -1,5 +1,22 @@
-<h1><%= @article.title %></h1>
-<h4><%= @article.content %></h4>
-<%= render 'form' %>
-<p><%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></p>
-<p><%= link_to "All articles", articles_path %></p>
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h1 class="text-center"><%= @article.title %></h1>
+        <%= Kramdown::Document.new(@article.content).to_html.html_safe %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 links">
+        <p><%= link_to "Delete Artice", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %></p>
+        <p><%= link_to "All articles", articles_path, class: 'btn btn-default' %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
+
